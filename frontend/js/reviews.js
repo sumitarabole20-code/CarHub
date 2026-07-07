@@ -45,7 +45,7 @@ async function submitReview(){
 
     const response =
     await fetch(
-        "http://localhost:5000/api/reviews",
+        "https://carhub-backend-kkwd.onrender.com/api/reviews",
         {
             method:"POST",
             headers:{
@@ -69,7 +69,7 @@ async function loadReviews(){
 
     const response =
     await fetch(
-`http://localhost:5000/api/reviews/${reviewCarId}`
+`https://carhub-backend-kkwd.onrender.com/api/reviews/${reviewCarId}`
     );
 
     const reviews =

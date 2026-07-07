@@ -92,7 +92,7 @@ function readSelectedImage() {
 async function loadCars() {
 
     const response = await fetch(
-        "http://localhost:5000/api/admin/cars"
+        "https://carhub-backend-kkwd.onrender.com/api/admin/cars"
     );
 
     const cars = await response.json();
@@ -160,7 +160,7 @@ async function deleteCar(id) {
 
     const response =
     await fetch(
-        `http://localhost:5000/api/cars/${id}`,
+        `https://carhub-backend-kkwd.onrender.com/api/cars/${id}`,
         {
             method:"DELETE"
         }
@@ -177,7 +177,7 @@ async function loadCars() {
 
 const response = await fetch(
 
-"http://localhost:5000/api/admin/cars"
+"https://carhub-backend-kkwd.onrender.com/api/admin/cars"
 
 );
 
@@ -302,7 +302,7 @@ if(editingId){
 
 await fetch(
 
-`http://localhost:5000/api/admin/cars/${editingId}`,
+`https://carhub-backend-kkwd.onrender.com/api/admin/cars/${editingId}`,
 
 {
 
@@ -328,7 +328,7 @@ else{
 
 await fetch(
 
-"http://localhost:5000/api/admin/cars",
+"https://carhub-backend-kkwd.onrender.com/api/admin/cars",
 
 {
 
@@ -363,7 +363,7 @@ if(confirm(
 
 await fetch(
 
-`http://localhost:5000/api/admin/cars/${id}`,
+`https://carhub-backend-kkwd.onrender.com/api/admin/cars/${id}`,
 
 {
 

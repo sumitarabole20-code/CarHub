@@ -7,7 +7,7 @@ async function loadBookings(){
 
     const response =
     await fetch(
-        "http://localhost:5000/api/admin/bookings"
+        "https://carhub-backend-kkwd.onrender.com/api/admin/bookings"
     );
 
     const bookings =
@@ -78,7 +78,7 @@ async function approveBooking(id){
 
         const response =
         await fetch(
-            `http://localhost:5000/api/admin/bookings/${id}/approve`,
+            `https://carhub-backend-kkwd.onrender.com/api/admin/bookings/${id}/approve`,
             {
                 method:"PUT"
             }

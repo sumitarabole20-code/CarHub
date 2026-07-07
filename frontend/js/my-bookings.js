@@ -22,7 +22,7 @@ async function loadBookings() {
 
     const response =
     await fetch(
-`http://localhost:5000/api/bookings/user/${userId}`
+`https://carhub-backend-kkwd.onrender.com/api/bookings/user/${userId}`
     );
 
     const bookings =

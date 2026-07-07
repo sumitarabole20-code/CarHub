@@ -30,7 +30,7 @@ params.get(
 
     const response =
     await fetch(
-        "http://localhost:5000/api/payments",
+        "https://carhub-backend-kkwd.onrender.com/api/payments",
         {
             method:"POST",
             headers:{

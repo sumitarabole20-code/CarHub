@@ -2,7 +2,7 @@ async function loadDashboard() {
 
     const response =
     await fetch(
-        "http://localhost:5000/api/admin/dashboard"
+        "https://carhub-backend-kkwd.onrender.com/api/admin/dashboard"
     );
 
     const data =

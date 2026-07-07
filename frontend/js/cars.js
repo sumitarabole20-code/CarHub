@@ -7,7 +7,7 @@ let allCars = [];
 async function loadCars() {
 
     const response = await fetch(
-        "http://localhost:5000/api/cars"
+        "https://carhub-backend-kkwd.onrender.com/api/cars"
     );
 
     allCars = await response.json();

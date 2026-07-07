@@ -17,7 +17,7 @@ registerForm.addEventListener("submit", async (e) => {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/auth/register",
+            "https://carhub-backend-kkwd.onrender.com/api/auth/register",
             {
                 method: "POST",
                 headers: {

@@ -7,7 +7,7 @@ async function loadUsers() {
 
     const response =
     await fetch(
-        "http://localhost:5000/api/admin/users"
+        "https://carhub-backend-kkwd.onrender.com/api/admin/users"
     );
 
     const users =
@@ -50,7 +50,7 @@ async function deleteUser(id){
     }
 
     await fetch(
-        `http://localhost:5000/api/admin/users/${id}`,
+        `https://carhub-backend-kkwd.onrender.com/api/admin/users/${id}`,
         {
             method:"DELETE"
         }
