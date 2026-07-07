@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Payment</title>
+
+    <link
+    rel="stylesheet"
+    href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div class="payment-container">
+
+        <div class="payment-card">
+
+            <h1>Payment</h1>
+
+            <h2>Amount: ₹50,000</h2>
+
+            <select id="paymentMethod">
+
+                <option value="UPI">UPI</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+
+            </select>
+
+            <button
+                class="payment-btn"
+                onclick="payNow()"
+            >
+                Pay Now
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="../js/payment.js"></script>
+
+</body>
+</html>

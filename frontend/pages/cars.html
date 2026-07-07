@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarHub - Cars</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+        <div class="logo">CarHub</div>
+                <h1>@arabolesumit_2211</h1>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="favorites.html">Favorites ❤️</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="filter-container">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Cars..."
+    >
+
+    <select id="filterType">
+
+        <option value="All">All Types</option>
+        <option value="SUV">SUV</option>
+        <option value="Sedan">Sedan</option>
+        <option value="Sports">Sports</option>
+        <option value="Electric">Electric</option>
+
+    </select>
+
+</div>
+
+    <!-- Heading -->
+
+    <section class="cars-section">
+
+        <h1 class="section-title">
+            Our Premium Collection
+        </h1>
+
+        <div class="cars-container" id="carsContainer">
+
+        </div>
+
+    </section>
+
+    <script src="../js/cars.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Manage Cars</title>
+
+    <link rel="stylesheet"
+    href="../css/admin-cars.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <h2>CarHub Admin</h2>
+
+</nav>
+
+<div class="container">
+
+<h1>Manage Cars</h1>
+
+<button onclick="openForm()">
+
++ Add New Car
+
+</button>
+
+<form id="carForm">
+
+<input
+id="name"
+placeholder="Car Name">
+
+<input
+id="brand"
+placeholder="Brand">
+
+<input
+id="price"
+placeholder="Price">
+
+<input
+id="type"
+placeholder="Type">
+
+<input
+id="fuelType"
+placeholder="Fuel Type">
+
+<input
+id="transmission"
+placeholder="Transmission">
+<input
+type="file"
+id="imageFile"
+accept="image/*">
+<textarea
+id="description"
+placeholder="Description">
+</textarea>
+<button type="submit">
+Save Car
+</button>
+
+</form>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Image</th>
+
+<th>Name</th>
+
+<th>Brand</th>
+
+<th>Price</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="carsTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="../js/admin-cars.js">
+
+</script>
+
+</body>
+
+</html>

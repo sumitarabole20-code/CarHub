@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Car</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CarHub</div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+    </nav>
+
+    <div class="booking-container">
+
+        <div class="booking-card">
+
+            <h1>Book Your Car</h1>
+
+            <form id="bookingForm">
+
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Full Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <button type="submit">
+                    Book Now
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+        const bookingForm =
+            document.getElementById("bookingForm");
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        const carId = params.get("id");
+
+        bookingForm.addEventListener(
+            "submit",
+            async (e) => {
+
+                e.preventDefault();
+
+                const bookingData = {
+                    userId:
+                        localStorage.getItem("userId"),
+                    carId: carId,
+                    fullName:
+                        document.getElementById("fullName").value,
+                    email:
+                        document.getElementById("email").value,
+                    phone:
+                        document.getElementById("phone").value
+                };
+
+                const response = await fetch(
+                    "http://localhost:5000/api/bookings",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+                        body: JSON.stringify(
+                            bookingData
+                        )
+                    }
+                );
+
+                const data =
+                    await response.json();
+
+                if (response.ok) {
+                    alert(
+                        "Booking Successful 🚗"
+                    );
+
+                    window.location.href =
+                        "cars.html";
+                } else {
+                    alert(data.message);
+                }
+            }
+        );
+    </script>
+
+</body>
+</html>
